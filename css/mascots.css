@@ -1,0 +1,41 @@
+/* =============================================================
+   CeYlanCapanoLu — mascots.css
+   Placement helpers for the studio's SVG animal mascots.
+   ------------------------------------------------------------
+   This file is additive only. Every selector below is new and
+   no existing rule is duplicated or overridden, so removing the
+   file restores the previous layout exactly.
+
+   The mascot wrapper itself (.mascot and its --xs/--sm/--md/--lg/--xl
+   size classes, plus the --float/--bob/--tilt/--glow motion classes)
+   lives in css/animations.css and is reused unchanged.
+   ============================================================= */
+
+/* ---------- Hero companion -------------------------------------------
+   The cinematic hero keeps its headline and lead inside a 760px
+   column and leaves the right-hand side as deliberate negative
+   space. This anchors the studio mascot in that space instead of
+   pushing the headline down the page.
+
+   The containing block is .hero__inner (position: relative), so the
+   companion stays inside the page gutter at every viewport width. */
+.mascot-hero {
+  position: absolute;
+  right: clamp(1rem, 3vw, 4.5rem);
+  bottom: clamp(1rem, 2.5vw, 3.25rem);
+  z-index: 2;
+  pointer-events: none;
+}
+
+/* Below the tablet breakpoint the hero column fills the viewport, so
+   the companion drops back into the flow and becomes its own row
+   underneath the copy. `position: relative` is kept (not static) so
+   the .mascot--glow halo still resolves against the wrapper. */
+@media (max-width: 1080px) {
+  .mascot-hero {
+    position: relative;
+    right: auto;
+    bottom: auto;
+    justify-self: start;
+  }
+}
