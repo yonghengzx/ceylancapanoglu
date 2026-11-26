@@ -178,7 +178,9 @@
         button.textContent = expanded ? 'Expand this clause' : 'Collapse this clause';
       });
 
-      clause.appendChild(button);
+      var holder = doc.createElement('div');
+      holder.appendChild(button);
+      clause.appendChild(holder);
     });
   }
 
