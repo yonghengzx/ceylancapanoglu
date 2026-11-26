@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600" width="1200" height="600" preserveAspectRatio="none" role="img" aria-label="Perspective grid floor">
+  <title>Perspective grid</title>
+  <defs>
+    <linearGradient id="gridFade" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#8FB4FF" stop-opacity=".14"/>
+      <stop offset="45%" stop-color="#8FB4FF" stop-opacity=".38"/>
+      <stop offset="100%" stop-color="#00E0C6" stop-opacity=".62"/>
+    </linearGradient>
+  </defs>
+  <g stroke="url(#gridFade)" stroke-width="1" fill="none">
+    <path d="M600 40 L-400 600M600 40 L-100 600M600 40 L120 600M600 40 L300 600M600 40 L460 600M600 40 L600 600M600 40 L740 600M600 40 L900 600M600 40 L1080 600M600 40 L1300 600M600 40 L1600 600M600 40 L2000 600"/>
+    <path d="M0 600h1200M0 520h1200M0 450h1200M0 392h1200M0 344h1200M0 304h1200M0 270h1200M0 240h1200M0 214h1200M0 190h1200M0 168h1200M0 148h1200M0 130h1200M0 113h1200M0 98h1200M0 84h1200M0 71h1200M0 59h1200"/>
+  </g>
+</svg>

@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 160" width="160" height="160" role="img" aria-label="Bibi, the studio rabbit mascot">
+  <title>Bibi the rabbit mascot</title>
+  <style>
+    .ccl-rabbit-bob{transform-box:fill-box;transform-origin:50% 92%;animation:cclRabbitBob 4s ease-in-out infinite}
+    .ccl-rabbit-blink{transform-box:fill-box;transform-origin:50% 50%;animation:cclRabbitBlink 5s ease-in-out infinite}
+    .ccl-rabbit-wave{transform-box:fill-box;transform-origin:14% 86%;animation:cclRabbitWave 2.4s ease-in-out infinite}
+    .ccl-rabbit-spark{transform-box:fill-box;transform-origin:center;animation:cclRabbitSpark 3.4s ease-in-out infinite}
+    .ccl-rabbit-ear-l{transform-box:fill-box;transform-origin:50% 100%;animation:cclRabbitEarL 5.2s ease-in-out infinite}
+    .ccl-rabbit-ear-r{transform-box:fill-box;transform-origin:50% 100%;animation:cclRabbitEarR 5.2s ease-in-out infinite}
+    @keyframes cclRabbitBob{0%,100%{transform:translateY(0) rotate(-1.6deg)}50%{transform:translateY(-8px) rotate(1.6deg)}}
+    @keyframes cclRabbitBlink{0%,84%,100%{transform:scaleY(1)}89%{transform:scaleY(.08)}95%{transform:scaleY(1)}}
+    @keyframes cclRabbitWave{0%,100%{transform:rotate(-14deg)}50%{transform:rotate(14deg)}}
+    @keyframes cclRabbitSpark{0%,100%{transform:scale(.72) rotate(0deg);opacity:.6}50%{transform:scale(1.2) rotate(30deg);opacity:1}}
+    @keyframes cclRabbitEarL{0%,84%,100%{transform:rotate(0deg)}90%{transform:rotate(-9deg)}}
+    @keyframes cclRabbitEarR{0%,84%,100%{transform:rotate(0deg)}90%{transform:rotate(9deg)}}
+    @media (prefers-reduced-motion:reduce){.ccl-rabbit-bob,.ccl-rabbit-blink,.ccl-rabbit-wave,.ccl-rabbit-spark,.ccl-rabbit-ear-l,.ccl-rabbit-ear-r{animation:none}}
+  </style>
+  <g class="ccl-rabbit-bob">
+    <ellipse cx="80" cy="149" rx="40" ry="6" fill="#05070d" opacity=".38"/>
+    <path d="M50 104c12-7 48-7 60 0l6 44c-16 7-56 7-72 0Z" fill="#9d174d"/>
+    <path d="M50 104c12-7 48-7 60 0l2 15c-14-6-50-6-64 0Z" fill="#f472b6" opacity=".45"/>
+    <ellipse cx="80" cy="126" rx="33" ry="26" fill="#f8fafc"/>
+    <ellipse cx="80" cy="134" rx="19" ry="14" fill="#e2e8f0"/>
+    <g class="ccl-rabbit-ear-l">
+      <ellipse cx="62" cy="28" rx="10" ry="30" fill="#f8fafc" transform="rotate(-8 62 28)"/>
+      <ellipse cx="62" cy="28" rx="5" ry="21" fill="#fbcfe8" transform="rotate(-8 62 28)"/>
+    </g>
+    <g class="ccl-rabbit-ear-r">
+      <ellipse cx="98" cy="28" rx="10" ry="30" fill="#f8fafc" transform="rotate(8 98 28)"/>
+      <ellipse cx="98" cy="28" rx="5" ry="21" fill="#fbcfe8" transform="rotate(8 98 28)"/>
+    </g>
+    <ellipse cx="80" cy="80" rx="39" ry="34" fill="#f8fafc"/>
+    <ellipse cx="80" cy="90" rx="21" ry="15" fill="#ffffff"/>
+    <g class="ccl-rabbit-blink">
+      <ellipse cx="66" cy="76" rx="7.4" ry="9.2" fill="#0b1220"/>
+      <ellipse cx="94" cy="76" rx="7.4" ry="9.2" fill="#0b1220"/>
+      <circle cx="63.6" cy="72" r="3.2" fill="#ffffff"/>
+      <circle cx="91.6" cy="72" r="3.2" fill="#ffffff"/>
+      <circle cx="68.4" cy="80" r="1.5" fill="#ffffff" opacity=".8"/>
+      <circle cx="96.4" cy="80" r="1.5" fill="#ffffff" opacity=".8"/>
+    </g>
+    <ellipse cx="50" cy="90" rx="9" ry="5.6" fill="#fb7185" opacity=".4"/>
+    <ellipse cx="110" cy="90" rx="9" ry="5.6" fill="#fb7185" opacity=".4"/>
+    <path d="M75 87c2.8-2 7.2-2 10 0-.8 3.8-2.4 5.4-5 5.4s-4.2-1.6-5-5.4Z" fill="#f472b6"/>
+    <path d="M80 92.4v3M80 95.4c-2.2 2.8-5.8 1.8-6.8-1M80 95.4c2.2 2.8 5.8 1.8 6.8-1" fill="none" stroke="#9d174d" stroke-width="2.2" stroke-linecap="round"/>
+    <rect x="75.6" y="99" width="8.8" height="8" rx="2.4" fill="#ffffff" stroke="#e2e8f0" stroke-width="1.4"/>
+    <path d="M46 96a40 40 0 0 0 68 0" fill="none" stroke="#22d3ee" stroke-width="6" stroke-linecap="round"/>
+    <rect x="32" y="90" width="15" height="22" rx="7.5" fill="#0ea5e9"/>
+    <rect x="35.5" y="94" width="8" height="14" rx="4" fill="#baeaff"/>
+    <rect x="113" y="90" width="15" height="22" rx="7.5" fill="#0ea5e9"/>
+    <rect x="116.5" y="94" width="8" height="14" rx="4" fill="#baeaff"/>
+    <g class="ccl-rabbit-wave">
+      <path d="M113 116c8-4 16-1 19 6 3 8-1 15-8 16-7 1-12-4-13-10Z" fill="#f8fafc"/>
+      <ellipse cx="123" cy="126" rx="6" ry="6.6" fill="#fbcfe8"/>
+      <path d="M117 120v-6M122 119v-6M127 121v-5" stroke="#cbd5e1" stroke-width="1.8" stroke-linecap="round"/>
+    </g>
+    <g class="ccl-rabbit-spark">
+      <path d="M133 74l1.6 4.4 4.4 1.6-4.4 1.6-1.6 4.4-1.6-4.4-4.4-1.6 4.4-1.6Z" fill="#22d3ee"/>
+    </g>
+  </g>
+</svg>

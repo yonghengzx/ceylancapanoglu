@@ -1,0 +1,69 @@
+name: Deploy CeYlanCapanoLu studio site to GitHub Pages
+
+on:
+  push:
+    branches: ["main"]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
+
+      # The site lives at the repository root, so the repository root is the site root.
+      # Repository-only folders are dropped; hidden files such as .nojekyll are kept.
+      - name: Stage site root
+        shell: bash
+        run: |
+          set -euo pipefail
+          SITE_DIR="$RUNNER_TEMP/site"
+          rm -rf "$SITE_DIR"
+          mkdir -p "$SITE_DIR"
+          if command -v rsync >/dev/null 2>&1; then
+            rsync -a \
+              --exclude='/.git/' \
+              --exclude='/.github/' \
+              --exclude='/docs/' \
+              --exclude='/ops/' \
+              --exclude='/scripts/' \
+              --exclude='/node_modules/' \
+              "$GITHUB_WORKSPACE/" "$SITE_DIR/"
+          else
+            tar --exclude='./.git' --exclude='./.github' --exclude='./docs' \
+                --exclude='./ops' --exclude='./scripts' --exclude='./node_modules' \
+                -C "$GITHUB_WORKSPACE" -cf - . | tar -xf - -C "$SITE_DIR"
+          fi
+          if [ ! -f "$SITE_DIR/.nojekyll" ]; then
+            touch "$SITE_DIR/.nojekyll"
+          fi
+          if [ ! -f "$SITE_DIR/index.html" ]; then
+            echo "::error::index.html is missing from the site root"
+            exit 1
+          fi
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: ${{ runner.temp }}/site
+          retention-days: 1
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

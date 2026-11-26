@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="128" height="128" role="img" aria-label="Momo the capybara mascot">
+  <title>Momo the capybara mascot</title>
+  <style>
+    .cclCapyBob{transform-box:fill-box;transform-origin:center;animation:cclCapyBobK 4.6s ease-in-out infinite}
+    .cclCapyBlink{transform-box:fill-box;transform-origin:center;animation:cclCapyBlinkK 6.2s ease-in-out infinite}
+    @keyframes cclCapyBobK{0%,100%{transform:translateY(0) scale(1,1)}50%{transform:translateY(-3px) scale(1.015,.985)}}
+    @keyframes cclCapyBlinkK{0%,90%,100%{transform:scaleY(1)}94%{transform:scaleY(.1)}}
+    @media (prefers-reduced-motion:reduce){.cclCapyBob,.cclCapyBlink{animation:none}}
+  </style>
+  <ellipse cx="64" cy="121" rx="33" ry="5.5" fill="#2A2233" opacity=".15"/>
+  <g class="cclCapyBob">
+    <path d="M16 124c4-18 24-27 48-27s44 9 48 27z" fill="#D9B784" stroke="#B2875A" stroke-width="3" stroke-linejoin="round"/>
+    <path d="M44 102c6 6 34 6 40 0l4 6c-8 7-40 7-48 0z" fill="#00E0C6"/>
+    <ellipse cx="34" cy="26" rx="10" ry="9" fill="#D9B784" stroke="#B2875A" stroke-width="3"/>
+    <ellipse cx="94" cy="26" rx="10" ry="9" fill="#D9B784" stroke="#B2875A" stroke-width="3"/>
+    <ellipse cx="34" cy="27" rx="5.5" ry="5" fill="#E79A86"/>
+    <ellipse cx="94" cy="27" rx="5.5" ry="5" fill="#E79A86"/>
+    <path d="M64 20c26 0 44 14 44 36 0 27-19 48-44 48s-44-21-44-48c0-22 18-36 44-36z" fill="#D9B784" stroke="#B2875A" stroke-width="3" stroke-linejoin="round"/>
+    <ellipse cx="64" cy="86" rx="30" ry="20" fill="#F6E4C8"/>
+    <ellipse cx="32" cy="78" rx="8" ry="5" fill="#F0A08A" opacity=".55"/>
+    <ellipse cx="96" cy="78" rx="8" ry="5" fill="#F0A08A" opacity=".55"/>
+    <g class="cclCapyBlink">
+      <ellipse cx="45" cy="62" rx="5.5" ry="6.5" fill="#2A2233"/>
+      <ellipse cx="83" cy="62" rx="5.5" ry="6.5" fill="#2A2233"/>
+      <circle cx="43" cy="60" r="2" fill="#FFFFFF"/>
+      <circle cx="81" cy="60" r="2" fill="#FFFFFF"/>
+    </g>
+    <ellipse cx="59" cy="80" rx="2.8" ry="3.4" fill="#2A2233"/>
+    <ellipse cx="69" cy="80" rx="2.8" ry="3.4" fill="#2A2233"/>
+    <path d="M52 88q12 12 24 0" fill="none" stroke="#2A2233" stroke-width="3.4" stroke-linecap="round"/>
+  </g>
+</svg>

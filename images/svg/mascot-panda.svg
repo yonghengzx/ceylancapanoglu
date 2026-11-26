@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="128" height="128" role="img" aria-label="Bo the panda mascot">
+  <title>Bo the panda mascot</title>
+  <style>
+    .cclPandaBob{transform-box:fill-box;transform-origin:center;animation:cclPandaBobK 4.2s ease-in-out infinite}
+    .cclPandaBlink{transform-box:fill-box;transform-origin:center;animation:cclPandaBlinkK 5.8s ease-in-out infinite}
+    @keyframes cclPandaBobK{0%,100%{transform:translateY(0) rotate(-1deg)}50%{transform:translateY(-3.5px) rotate(1deg)}}
+    @keyframes cclPandaBlinkK{0%,89%,100%{transform:scaleY(1)}93%{transform:scaleY(.08)}}
+    @media (prefers-reduced-motion:reduce){.cclPandaBob,.cclPandaBlink{animation:none}}
+  </style>
+  <ellipse cx="64" cy="121" rx="33" ry="5.5" fill="#2A2233" opacity=".15"/>
+  <g class="cclPandaBob">
+    <path d="M16 124c4-18 24-27 48-27s44 9 48 27z" fill="#FFFFFF" stroke="#2A2233" stroke-width="3" stroke-linejoin="round"/>
+    <circle cx="32" cy="28" r="15" fill="#2A2233"/>
+    <circle cx="96" cy="28" r="15" fill="#2A2233"/>
+    <circle cx="64" cy="62" r="42" fill="#FFFFFF" stroke="#2A2233" stroke-width="3"/>
+    <ellipse cx="45" cy="60" rx="13" ry="15.5" fill="#2A2233" transform="rotate(-18 45 60)"/>
+    <ellipse cx="83" cy="60" rx="13" ry="15.5" fill="#2A2233" transform="rotate(18 83 60)"/>
+    <ellipse cx="33" cy="78" rx="7.5" ry="4.5" fill="#FF8FB1" opacity=".6"/>
+    <ellipse cx="95" cy="78" rx="7.5" ry="4.5" fill="#FF8FB1" opacity=".6"/>
+    <g class="cclPandaBlink">
+      <ellipse cx="46" cy="60" rx="5.5" ry="6.5" fill="#FFFFFF"/>
+      <ellipse cx="82" cy="60" rx="5.5" ry="6.5" fill="#FFFFFF"/>
+      <circle cx="44" cy="58" r="2" fill="#FFFFFF"/>
+      <circle cx="80" cy="58" r="2" fill="#FFFFFF"/>
+    </g>
+    <path d="M57 80q7-5 14 0-7 9-14 0z" fill="#2A2233"/>
+    <path d="M64 87v5m0 0c-3 4-8 2-10-2m10 2c3 4 8 2 10-2" fill="none" stroke="#2A2233" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+</svg>

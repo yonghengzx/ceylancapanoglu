@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="128" height="128" role="img" aria-label="Nimbus the penguin mascot">
+  <title>Nimbus the penguin mascot</title>
+  <style>
+    .cclPenguinBob{transform-box:fill-box;transform-origin:center;animation:cclPenguinBobK 3.2s ease-in-out infinite}
+    .cclPenguinBlink{transform-box:fill-box;transform-origin:center;animation:cclPenguinBlinkK 5s ease-in-out infinite}
+    @keyframes cclPenguinBobK{0%,100%{transform:translateY(0) rotate(1deg)}50%{transform:translateY(-4px) rotate(-1deg)}}
+    @keyframes cclPenguinBlinkK{0%,86%,100%{transform:scaleY(1)}90%{transform:scaleY(.08)}}
+    @media (prefers-reduced-motion:reduce){.cclPenguinBob,.cclPenguinBlink{animation:none}}
+  </style>
+  <ellipse cx="64" cy="121" rx="30" ry="5" fill="#2A2233" opacity=".15"/>
+  <g class="cclPenguinBob">
+    <path d="M52 110 38 120l16 2z" fill="#FFC44D" stroke="#E0A02F" stroke-width="2.5" stroke-linejoin="round"/>
+    <path d="M76 110 90 120l-16 2z" fill="#FFC44D" stroke="#E0A02F" stroke-width="2.5" stroke-linejoin="round"/>
+    <path d="M36 56c-12 8-16 28-9 40 9-8 14-24 15-36z" fill="#1B2340"/>
+    <path d="M92 56c12 8 16 28 9 40-9-8-14-24-15-36z" fill="#1B2340"/>
+    <path d="M64 14c22 0 34 22 34 52 0 34-15 52-34 52s-34-18-34-52c0-30 12-52 34-52z" fill="#2B3550" stroke="#1B2340" stroke-width="3" stroke-linejoin="round"/>
+    <ellipse cx="64" cy="84" rx="26" ry="32" fill="#F6F8FD"/>
+    <ellipse cx="64" cy="48" rx="29" ry="25" fill="#F6F8FD"/>
+    <circle cx="44" cy="60" r="5.5" fill="#FF8FB1" opacity=".45"/>
+    <circle cx="84" cy="60" r="5.5" fill="#FF8FB1" opacity=".45"/>
+    <g class="cclPenguinBlink">
+      <circle cx="52" cy="46" r="7" fill="#2A2233"/>
+      <circle cx="76" cy="46" r="7" fill="#2A2233"/>
+      <circle cx="49.5" cy="43" r="2.6" fill="#FFFFFF"/>
+      <circle cx="73.5" cy="43" r="2.6" fill="#FFFFFF"/>
+      <circle cx="54" cy="49" r="1.4" fill="#FFFFFF" opacity=".85"/>
+      <circle cx="78" cy="49" r="1.4" fill="#FFFFFF" opacity=".85"/>
+    </g>
+    <path d="M57 57h14l-7 11z" fill="#FFC44D" stroke="#E0A02F" stroke-width="2.5" stroke-linejoin="round"/>
+    <path d="M38 84c8 8 44 8 52 0l3 8c-10 9-48 9-58 0z" fill="#00E0C6"/>
+  </g>
+</svg>

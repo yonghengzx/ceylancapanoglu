@@ -1,0 +1,461 @@
+/* =============================================================
+   CeYlanCapanoLu — responsive.css
+   Breakpoints: 1200 / 1024 / 820 / 640 / 420
+   Mobile-first safety net — no horizontal overflow at 320px.
+   ============================================================= */
+
+/* =============================================================
+   ≤ 1200px — tighten the wide grid
+   ============================================================= */
+@media (max-width: 1200px) {
+  :root {
+    --container-max: 1080px;
+    --header-h: 68px;
+  }
+
+  .site-footer__grid {
+    grid-template-columns: minmax(0, 1.2fr) repeat(3, minmax(0, 1fr));
+    gap: var(--sp-7);
+  }
+
+  .hero__split {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 0.82fr);
+  }
+
+  .service-card--wide {
+    grid-column: span 1;
+  }
+
+  .grid--split,
+  .grid--split-reverse {
+    gap: var(--sp-7);
+  }
+}
+
+/* =============================================================
+   ≤ 1024px — collapse multi-column layouts
+   ============================================================= */
+@media (max-width: 1024px) {
+  :root {
+    --header-h: 68px;
+    --header-h-sm: 62px;
+  }
+
+  .grid--split,
+  .grid--split-reverse,
+  .hero__split,
+  .showcase,
+  .contact-layout,
+  .service-banner {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .grid--sidebar,
+  .legal-layout {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .legal-toc {
+    position: static;
+    max-height: none;
+    order: -1;
+  }
+
+  .legal-toc__list {
+    grid-template-columns: repeat(auto-fit, minmax(min(220px, 100%), 1fr));
+  }
+
+  .nav__list,
+  .nav__actions {
+    display: none;
+  }
+
+  .nav-toggle {
+    display: inline-flex;
+  }
+
+  .site-header__inner {
+    gap: var(--sp-4);
+  }
+
+  .stats-band__grid,
+  .stats-band__grid--3 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .grid--4 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .grid--3 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .site-footer__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: var(--sp-6);
+  }
+
+  .site-footer__brand {
+    grid-column: 1 / -1;
+  }
+
+  .hero__panel-mascot {
+    right: var(--sp-4);
+    bottom: calc(var(--sp-4) * -1);
+  }
+
+  .showcase__stage {
+    order: -1;
+  }
+}
+
+/* =============================================================
+   ≤ 820px — tablet portrait
+   ============================================================= */
+@media (max-width: 820px) {
+  :root {
+    --sp-gutter: clamp(1.15rem, 0.5rem + 2.6vw, 2.5rem);
+  }
+
+  .hero {
+    min-height: auto;
+    padding-block: clamp(3.5rem, 2rem + 7vw, 5rem);
+  }
+
+  .hero--short {
+    min-height: auto;
+  }
+
+  .hero__content {
+    max-width: 100%;
+  }
+
+  .hero__panel {
+    padding: var(--sp-6) var(--sp-5);
+  }
+
+  .showcase__stage {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: var(--sp-4);
+    padding: var(--sp-5) var(--sp-4) 0;
+  }
+
+  .device {
+    max-width: 210px;
+    border-radius: 28px;
+  }
+
+  .device__screen {
+    border-radius: 21px;
+  }
+
+  .device--tilt-left,
+  .device--tilt-right {
+    transform: perspective(1200px) rotateY(6deg) rotateX(2deg);
+  }
+
+  .cta-band__mascot {
+    opacity: 0.4;
+  }
+
+  .form-row {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .tabs__list {
+    width: 100%;
+    border-radius: var(--r-md);
+    overflow-x: auto;
+    flex-wrap: nowrap;
+    scrollbar-width: none;
+  }
+
+  .tabs__list::-webkit-scrollbar {
+    display: none;
+  }
+
+  .timeline {
+    padding-left: var(--sp-6);
+  }
+
+  .timeline__item::before {
+    left: calc(var(--sp-6) * -1 + 5px);
+  }
+
+  .toast-region {
+    right: var(--sp-4);
+    left: var(--sp-4);
+    bottom: var(--sp-4);
+    width: auto;
+  }
+
+  .back-to-top {
+    right: var(--sp-4);
+    bottom: var(--sp-4);
+  }
+}
+
+/* =============================================================
+   ≤ 640px — large phone
+   ============================================================= */
+@media (max-width: 640px) {
+  :root {
+    --header-h: 64px;
+  }
+
+  .grid--2,
+  .grid--3,
+  .grid--4,
+  .grid--auto,
+  .grid--auto-sm,
+  .grid--auto-lg {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .stats-band__grid,
+  .stats-band__grid--3 {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .brand__word {
+    width: 122px;
+    height: 24px;
+  }
+
+  .brand__mark {
+    width: 34px;
+    height: 34px;
+  }
+
+  .hero__actions,
+  .cta-band__actions {
+    width: 100%;
+  }
+
+  .hero__actions .btn,
+  .cta-band__actions .btn {
+    flex: 1 1 100%;
+  }
+
+  .showcase__stage {
+    grid-template-columns: minmax(0, 1fr);
+    justify-items: center;
+  }
+
+  .device {
+    max-width: 230px;
+  }
+
+  .device--tilt-left,
+  .device--tilt-right {
+    transform: none;
+  }
+
+  .site-footer__grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .site-footer__bottom {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--sp-4);
+  }
+
+  .legal-clause,
+  .contact-card,
+  .card,
+  .service-card,
+  .pillar,
+  .plan-card {
+    padding: var(--sp-5);
+  }
+
+  .legal-toc__list {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .faq-guide {
+    grid-template-columns: minmax(0, 1fr);
+    justify-items: center;
+    text-align: center;
+  }
+
+  .mascot--xl {
+    width: 180px;
+    height: 180px;
+  }
+
+  .mascot--lg {
+    width: 132px;
+    height: 132px;
+  }
+
+  .cta-band {
+    border-radius: var(--r-xl);
+  }
+
+  .marquee__item {
+    font-size: var(--fs-h3);
+  }
+
+  .scroll-hint {
+    display: none;
+  }
+}
+
+/* =============================================================
+   ≤ 420px — small phone (320px baseline safety)
+   ============================================================= */
+@media (max-width: 420px) {
+  :root {
+    --sp-gutter: 1rem;
+    --fs-body: 0.95rem;
+  }
+
+  .brand__word {
+    display: none;
+  }
+
+  .eyebrow {
+    letter-spacing: 0.16em;
+  }
+
+  .btn {
+    padding: var(--sp-4) var(--sp-5);
+  }
+
+  .btn--lg {
+    padding: var(--sp-4) var(--sp-6);
+  }
+
+  .hero__meta {
+    flex-direction: column;
+    gap: var(--sp-2);
+  }
+
+  .stats-band__grid,
+  .stats-band__grid--3 {
+    gap: var(--sp-3);
+  }
+
+  .stat-card {
+    padding: var(--sp-4);
+  }
+
+  .form-row {
+    gap: var(--sp-4);
+  }
+
+  .input,
+  .textarea,
+  .select {
+    padding: var(--sp-3) var(--sp-4);
+    font-size: 1rem;
+  }
+
+  .toast-region {
+    right: var(--sp-3);
+    left: var(--sp-3);
+    bottom: var(--sp-3);
+  }
+
+  .back-to-top {
+    right: var(--sp-3);
+    bottom: var(--sp-3);
+    width: 42px;
+    height: 42px;
+  }
+
+  .legal-clause,
+  .contact-card,
+  .card,
+  .service-card,
+  .pillar,
+  .plan-card {
+    padding: var(--sp-4);
+    border-radius: var(--r-md);
+  }
+
+  .mascot--xl {
+    width: 150px;
+    height: 150px;
+  }
+
+  .mascot--lg {
+    width: 116px;
+    height: 116px;
+  }
+
+  .mascot--md {
+    width: 92px;
+    height: 92px;
+  }
+
+  .device {
+    max-width: 200px;
+  }
+
+  .site-footer__social a {
+    width: 34px;
+    height: 34px;
+  }
+
+  .accordion__trigger {
+    padding: var(--sp-4);
+    font-size: var(--fs-body);
+  }
+
+  .accordion__body {
+    padding: 0 var(--sp-4) var(--sp-4);
+  }
+}
+
+/* =============================================================
+   Landscape phones — keep the hero compact
+   ============================================================= */
+@media (max-height: 560px) and (orientation: landscape) {
+  .hero {
+    min-height: auto;
+    padding-block: var(--sp-8);
+  }
+
+  .mobile-drawer {
+    padding-top: calc(var(--header-h-sm) + var(--sp-4));
+  }
+}
+
+/* =============================================================
+   Coarse pointers — no hover-only affordances
+   ============================================================= */
+@media (hover: none) {
+  .card:hover,
+  .service-card:hover,
+  .feature-card:hover,
+  .pillar:hover,
+  .app-card:hover,
+  .contact-card:hover,
+  .plan-card:hover {
+    transform: none;
+  }
+
+  .btn:hover,
+  .chip:hover,
+  .store-badge:hover,
+  .site-footer__social a:hover {
+    transform: none;
+  }
+
+  .cursor-glow {
+    display: none;
+  }
+}
+
+/* =============================================================
+   Print — narrow the measure and drop decorative layers
+   ============================================================= */
+@media print {
+  .legal-layout {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}

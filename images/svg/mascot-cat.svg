@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="128" height="128" role="img" aria-label="Suki the cat mascot">
+  <title>Suki the cat mascot</title>
+  <style>
+    .cclCatBob{transform-box:fill-box;transform-origin:center;animation:cclCatBobK 3.8s ease-in-out infinite}
+    .cclCatBlink{transform-box:fill-box;transform-origin:center;animation:cclCatBlinkK 5.4s ease-in-out infinite}
+    @keyframes cclCatBobK{0%,100%{transform:translateY(0) rotate(-1deg)}50%{transform:translateY(-5px) rotate(1.1deg)}}
+    @keyframes cclCatBlinkK{0%,88%,100%{transform:scaleY(1)}92%{transform:scaleY(.08)}}
+    @media (prefers-reduced-motion:reduce){.cclCatBob,.cclCatBlink{animation:none}}
+  </style>
+  <ellipse cx="64" cy="121" rx="33" ry="5.5" fill="#2A2233" opacity=".15"/>
+  <g class="cclCatBob">
+    <path d="M16 124c4-18 24-27 48-27s44 9 48 27z" fill="#8FA0E8" stroke="#6F7FC8" stroke-width="3" stroke-linejoin="round"/>
+    <path d="M28 46 32 10 56 28z" fill="#8FA0E8" stroke="#6F7FC8" stroke-width="3" stroke-linejoin="round"/>
+    <path d="M100 46 96 10 72 28z" fill="#8FA0E8" stroke="#6F7FC8" stroke-width="3" stroke-linejoin="round"/>
+    <path d="M36 40 38 20 48 28z" fill="#FFB6C9"/>
+    <path d="M92 40 90 20 80 28z" fill="#FFB6C9"/>
+    <path d="M64 18c28 0 44 18 44 42 0 24-19 40-44 40s-44-16-44-40c0-24 16-42 44-42z" fill="#8FA0E8" stroke="#6F7FC8" stroke-width="3" stroke-linejoin="round"/>
+    <path d="M54 30v10M64 26v12M74 30v10" fill="none" stroke="#6F7FC8" stroke-width="4" stroke-linecap="round"/>
+    <ellipse cx="34" cy="80" rx="8" ry="5" fill="#FF9EAE" opacity=".55"/>
+    <ellipse cx="94" cy="80" rx="8" ry="5" fill="#FF9EAE" opacity=".55"/>
+    <g class="cclCatBlink">
+      <ellipse cx="47" cy="66" rx="7.5" ry="8.5" fill="#2A2233"/>
+      <ellipse cx="81" cy="66" rx="7.5" ry="8.5" fill="#2A2233"/>
+      <circle cx="45" cy="63" r="2.6" fill="#FFFFFF"/>
+      <circle cx="79" cy="63" r="2.6" fill="#FFFFFF"/>
+      <circle cx="49" cy="69" r="1.4" fill="#FFFFFF" opacity=".85"/>
+      <circle cx="83" cy="69" r="1.4" fill="#FFFFFF" opacity=".85"/>
+    </g>
+    <path d="M58 82h12l-6 7z" fill="#FF8FA8" stroke="#2A2233" stroke-width="2.4" stroke-linejoin="round"/>
+    <path d="M64 89v5m0 0c-3 4-8 2-10-2m10 2c3 4 8 2 10-2" fill="none" stroke="#2A2233" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+    <g stroke="#2A2233" stroke-width="2.4" stroke-linecap="round" opacity=".7">
+      <path d="M40 86 16 81M40 92 15 93M41 98 18 104" fill="none"/>
+      <path d="M88 86 112 81M88 92 113 93M87 98 110 104" fill="none"/>
+    </g>
+  </g>
+</svg>

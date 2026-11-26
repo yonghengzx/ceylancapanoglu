@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="128" height="128" role="img" aria-label="Ceylan the fox mascot">
+  <title>Ceylan the fox mascot</title>
+  <style>
+    .cclFoxBob{transform-box:fill-box;transform-origin:center;animation:cclFoxBobK 3.4s ease-in-out infinite}
+    .cclFoxBlink{transform-box:fill-box;transform-origin:center;animation:cclFoxBlinkK 4.8s ease-in-out infinite}
+    @keyframes cclFoxBobK{0%,100%{transform:translateY(0) rotate(1deg)}50%{transform:translateY(-4px) rotate(-1.2deg)}}
+    @keyframes cclFoxBlinkK{0%,87%,100%{transform:scaleY(1)}91%{transform:scaleY(.08)}}
+    @media (prefers-reduced-motion:reduce){.cclFoxBob,.cclFoxBlink{animation:none}}
+  </style>
+  <ellipse cx="64" cy="121" rx="33" ry="5.5" fill="#2A2233" opacity=".15"/>
+  <g class="cclFoxBob">
+    <path d="M16 124c4-18 24-27 48-27s44 9 48 27z" fill="#FF8A4C" stroke="#D9632C" stroke-width="3" stroke-linejoin="round"/>
+    <path d="M48 100c3 14 8 21 16 21s13-7 16-21c-5 5-10 7-16 7s-11-2-16-7z" fill="#FFF3E6"/>
+    <path d="M30 44 38 8 58 26z" fill="#FF8A4C" stroke="#D9632C" stroke-width="3" stroke-linejoin="round"/>
+    <path d="M98 44 90 8 70 26z" fill="#FF8A4C" stroke="#D9632C" stroke-width="3" stroke-linejoin="round"/>
+    <path d="M37 40 40 20 50 28z" fill="#FFD9B8"/>
+    <path d="M91 40 88 20 78 28z" fill="#FFD9B8"/>
+    <path d="M64 16c25 0 41 16 41 37 0 20-13 38-41 53-28-15-41-33-41-53 0-21 16-37 41-37z" fill="#FF8A4C" stroke="#D9632C" stroke-width="3" stroke-linejoin="round"/>
+    <path d="M64 58c-17 0-31 11-31 25 0 14 13 28 31 39 18-11 31-25 31-39 0-14-14-25-31-25z" fill="#FFF3E6"/>
+    <ellipse cx="36" cy="68" rx="8" ry="5" fill="#FF9E8A" opacity=".55"/>
+    <ellipse cx="92" cy="68" rx="8" ry="5" fill="#FF9E8A" opacity=".55"/>
+    <g class="cclFoxBlink">
+      <ellipse cx="48" cy="54" rx="6" ry="7.5" fill="#2A2233"/>
+      <ellipse cx="80" cy="54" rx="6" ry="7.5" fill="#2A2233"/>
+      <circle cx="46" cy="51.5" r="2.3" fill="#FFFFFF"/>
+      <circle cx="78" cy="51.5" r="2.3" fill="#FFFFFF"/>
+      <circle cx="50" cy="57" r="1.2" fill="#FFFFFF" opacity=".85"/>
+      <circle cx="82" cy="57" r="1.2" fill="#FFFFFF" opacity=".85"/>
+    </g>
+    <path d="M57 68q7-6 14 0-7 10-14 0z" fill="#2A2233"/>
+    <path d="M64 76v6m0 0c-3 4-9 2-11-2m11 2c3 4 9 2 11-2" fill="none" stroke="#2A2233" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+</svg>

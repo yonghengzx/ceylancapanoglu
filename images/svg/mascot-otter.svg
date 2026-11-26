@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="128" height="128" role="img" aria-label="Pim the otter mascot">
+  <title>Pim the otter mascot</title>
+  <style>
+    .cclOtterBob{transform-box:fill-box;transform-origin:center;animation:cclOtterBobK 3.9s ease-in-out infinite}
+    .cclOtterBlink{transform-box:fill-box;transform-origin:center;animation:cclOtterBlinkK 5.2s ease-in-out infinite}
+    @keyframes cclOtterBobK{0%,100%{transform:translateY(0) rotate(1deg)}50%{transform:translateY(-4.5px) rotate(-1.2deg)}}
+    @keyframes cclOtterBlinkK{0%,87%,100%{transform:scaleY(1)}91%{transform:scaleY(.08)}}
+    @media (prefers-reduced-motion:reduce){.cclOtterBob,.cclOtterBlink{animation:none}}
+  </style>
+  <ellipse cx="64" cy="121" rx="33" ry="5.5" fill="#2A2233" opacity=".15"/>
+  <g class="cclOtterBob">
+    <path d="M16 124c4-18 24-27 48-27s44 9 48 27z" fill="#C98A4E" stroke="#A66A36" stroke-width="3" stroke-linejoin="round"/>
+    <path d="M46 98c6 6 30 6 36 0l4 6c-7 7-37 7-44 0z" fill="#00E0C6"/>
+    <circle cx="32" cy="32" r="10" fill="#C98A4E" stroke="#A66A36" stroke-width="3"/>
+    <circle cx="96" cy="32" r="10" fill="#C98A4E" stroke="#A66A36" stroke-width="3"/>
+    <circle cx="32" cy="32" r="5" fill="#F0A98C"/>
+    <circle cx="96" cy="32" r="5" fill="#F0A98C"/>
+    <path d="M64 22c25 0 42 17 42 39 0 24-18 43-42 43s-42-19-42-43c0-22 17-39 42-39z" fill="#C98A4E" stroke="#A66A36" stroke-width="3" stroke-linejoin="round"/>
+    <ellipse cx="64" cy="84" rx="28" ry="19" fill="#F6E3CC"/>
+    <ellipse cx="34" cy="74" rx="7.5" ry="4.5" fill="#F0A08A" opacity=".5"/>
+    <ellipse cx="94" cy="74" rx="7.5" ry="4.5" fill="#F0A08A" opacity=".5"/>
+    <g class="cclOtterBlink">
+      <ellipse cx="46" cy="60" rx="5.5" ry="6.5" fill="#2A2233"/>
+      <ellipse cx="82" cy="60" rx="5.5" ry="6.5" fill="#2A2233"/>
+      <circle cx="44" cy="58" r="2" fill="#FFFFFF"/>
+      <circle cx="80" cy="58" r="2" fill="#FFFFFF"/>
+    </g>
+    <path d="M58 78q6-5 12 0-6 8-12 0z" fill="#2A2233"/>
+    <path d="M64 86v5m0 0c-3 4-8 2-10-2m10 2c3 4 8 2 10-2" fill="none" stroke="#2A2233" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+</svg>

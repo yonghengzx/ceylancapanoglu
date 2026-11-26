@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600" width="600" height="600" role="img" aria-label="Flowing signal lines">
+  <title>Signal waves</title>
+  <defs>
+    <linearGradient id="waveFade" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#2F6BFF" stop-opacity="0"/>
+      <stop offset="22%" stop-color="#2F6BFF" stop-opacity=".6"/>
+      <stop offset="72%" stop-color="#00E0C6" stop-opacity=".5"/>
+      <stop offset="100%" stop-color="#7A5CFF" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <g fill="none" stroke-linecap="round" stroke="url(#waveFade)">
+    <path d="M-20 120C120 40 220 200 360 130S580 40 660 110" stroke-width="2"/>
+    <path d="M-20 180C120 100 220 260 360 190S580 100 660 170" stroke-width="2"/>
+    <path d="M-20 240C120 160 220 320 360 250S580 160 660 230" stroke-width="2"/>
+    <path d="M-20 300C120 220 220 380 360 310S580 220 660 290" stroke-width="1.6"/>
+    <path d="M-20 360C120 280 220 440 360 370S580 280 660 350" stroke-width="1.4" opacity=".6"/>
+  </g>
+</svg>

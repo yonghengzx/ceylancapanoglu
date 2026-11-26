@@ -1,0 +1,35 @@
+# ---------------------------------------------------------------------------
+# CeYlanCapanoLu studio site - repository hygiene
+#
+# This directory IS the GitHub repository root.
+# Only public site files are committed and published.
+# ---------------------------------------------------------------------------
+
+# Internal planning and legal source documents. These are working material for
+# the build; they are not part of the public site.
+docs/
+
+# Local release tooling (never shipped).
+ops/
+scripts/
+_tools/
+
+# Credential / secret material.
+.env
+.env.*
+*.pem
+*.key
+secrets.json
+*.token
+git-credentials
+
+# Dependencies, logs and editor cruft.
+node_modules/
+*.log
+*.tmp
+*.bak
+.DS_Store
+Thumbs.db
+desktop.ini
+.vscode/
+.idea/

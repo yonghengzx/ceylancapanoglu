@@ -1,0 +1,788 @@
+/* =============================================================
+   CeYlanCapanoLu — animations.css
+   The signature motion kit: diagonal light streaks, Ken-Burns,
+   staggered reveals, parallax, counters, mascot bob, marquee,
+   cursor glow, magnetic buttons, 3D tilt, ripple.
+   All motion is transform/opacity only and is reduced under
+   prefers-reduced-motion.
+   ============================================================= */
+
+/* ---------- Keyframes ------------------------------------------------ */
+@keyframes cclFadeUp {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 32px, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes cclFadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes cclFadeRight {
+  from {
+    opacity: 0;
+    transform: translate3d(-32px, 0, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes cclFadeLeft {
+  from {
+    opacity: 0;
+    transform: translate3d(32px, 0, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes cclScaleIn {
+  from {
+    opacity: 0;
+    transform: scale3d(0.94, 0.94, 1);
+  }
+  to {
+    opacity: 1;
+    transform: scale3d(1, 1, 1);
+  }
+}
+
+@keyframes cclKenBurns {
+  from {
+    transform: scale3d(1, 1, 1) translate3d(0, 0, 0);
+  }
+  to {
+    transform: scale3d(1.14, 1.14, 1) translate3d(-1.2%, -1.6%, 0);
+  }
+}
+
+@keyframes cclStreakSweep {
+  0% {
+    opacity: 0;
+    transform: translate3d(-120%, 0, 0) rotate(-18deg);
+  }
+  12% {
+    opacity: 1;
+  }
+  55% {
+    opacity: 0.9;
+  }
+  100% {
+    opacity: 0;
+    transform: translate3d(220%, 0, 0) rotate(-18deg);
+  }
+}
+
+@keyframes cclStreakVertical {
+  0% {
+    opacity: 0;
+    transform: translateY(-120%);
+  }
+  20% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(220%);
+  }
+}
+
+@keyframes cclMarquee {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+  to {
+    transform: translate3d(-50%, 0, 0);
+  }
+}
+
+@keyframes cclMarqueeReverse {
+  from {
+    transform: translate3d(-50%, 0, 0);
+  }
+  to {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes cclBob {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0) rotate(-1.2deg);
+  }
+  50% {
+    transform: translate3d(0, -12px, 0) rotate(1.4deg);
+  }
+}
+
+@keyframes cclFloat {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+  50% {
+    transform: translate3d(0, -18px, 0);
+  }
+}
+
+@keyframes cclPulseRing {
+  0% {
+    opacity: 0.6;
+    transform: scale3d(0.86, 0.86, 1);
+  }
+  70% {
+    opacity: 0;
+    transform: scale3d(1.24, 1.24, 1);
+  }
+  100% {
+    opacity: 0;
+    transform: scale3d(1.24, 1.24, 1);
+  }
+}
+
+@keyframes cclGlow {
+  0%,
+  100% {
+    opacity: 0.45;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+@keyframes cclShimmer {
+  from {
+    background-position: -220% 0;
+  }
+  to {
+    background-position: 220% 0;
+  }
+}
+
+@keyframes cclTilt {
+  from {
+    transform: perspective(900px) rotateX(0deg) rotateY(0deg);
+  }
+  to {
+    transform: perspective(900px) rotateX(var(--tilt-x, 0deg)) rotateY(var(--tilt-y, 0deg));
+  }
+}
+
+@keyframes cclRipple {
+  from {
+    opacity: 0.55;
+    transform: scale3d(0.2, 0.2, 1);
+  }
+  to {
+    opacity: 0;
+    transform: scale3d(2.6, 2.6, 1);
+  }
+}
+
+@keyframes cclSpin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes cclSpinReverse {
+  from {
+    transform: rotate(360deg);
+  }
+  to {
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes cclScrollHint {
+  0% {
+    opacity: 0;
+    transform: translate3d(-50%, 0, 0);
+  }
+  35% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: translate3d(-50%, 16px, 0);
+  }
+}
+
+@keyframes cclBarGrow {
+  from {
+    transform: scale3d(0, 1, 1);
+  }
+  to {
+    transform: scale3d(1, 1, 1);
+  }
+}
+
+@keyframes cclToastIn {
+  from {
+    opacity: 0;
+    transform: translate3d(24px, 0, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes cclDrawerIn {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 18px, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes cclCountPulse {
+  0% {
+    transform: scale3d(1, 1, 1);
+  }
+  40% {
+    transform: scale3d(1.06, 1.06, 1);
+  }
+  100% {
+    transform: scale3d(1, 1, 1);
+  }
+}
+
+/* ---------- Scroll reveal ------------------------------------------- */
+.reveal {
+  opacity: 0;
+  transform: translate3d(0, 34px, 0);
+  transition: opacity var(--dur-5) var(--ease-out), transform var(--dur-5) var(--ease-out);
+  will-change: opacity, transform;
+}
+
+.reveal--left {
+  transform: translate3d(-34px, 0, 0);
+}
+
+.reveal--right {
+  transform: translate3d(34px, 0, 0);
+}
+
+.reveal--scale {
+  transform: scale3d(0.95, 0.95, 1);
+}
+
+.reveal--blur {
+  filter: blur(6px);
+  transition: opacity var(--dur-5) var(--ease-out), transform var(--dur-5) var(--ease-out),
+    filter var(--dur-5) var(--ease-out);
+}
+
+.reveal.is-visible {
+  opacity: 1;
+  transform: translate3d(0, 0, 0) scale3d(1, 1, 1);
+  filter: blur(0);
+}
+
+/* Stagger hooks: .reveal + data-reveal-delay="120" */
+.reveal[data-reveal-delay] {
+  transition-delay: calc(var(--reveal-delay, 0) * 1ms);
+}
+
+.reveal[data-reveal-delay="80"] {
+  --reveal-delay: 80;
+}
+.reveal[data-reveal-delay="120"] {
+  --reveal-delay: 120;
+}
+.reveal[data-reveal-delay="160"] {
+  --reveal-delay: 160;
+}
+.reveal[data-reveal-delay="200"] {
+  --reveal-delay: 200;
+}
+.reveal[data-reveal-delay="240"] {
+  --reveal-delay: 240;
+}
+.reveal[data-reveal-delay="280"] {
+  --reveal-delay: 280;
+}
+.reveal[data-reveal-delay="320"] {
+  --reveal-delay: 320;
+}
+.reveal[data-reveal-delay="400"] {
+  --reveal-delay: 400;
+}
+
+/* ---------- Ken-Burns hero zoom ---------------------------------------- */
+.hero__media img {
+  animation: cclKenBurns var(--dur-8) ease-in-out infinite alternate;
+  will-change: transform;
+}
+
+.hero--short .hero__media img {
+  animation-duration: var(--dur-8);
+}
+
+/* ---------- Diagonal light streaks ------------------------------------- */
+.light-streak {
+  position: absolute;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.light-streak::before,
+.light-streak::after {
+  content: "";
+  position: absolute;
+  left: -40%;
+  width: 180%;
+  height: 2px;
+  background: var(--grad-streak);
+  filter: blur(0.5px);
+  opacity: 0;
+}
+
+.light-streak::before {
+  top: 26%;
+  animation: cclStreakSweep var(--dur-7) var(--ease-sweep) infinite;
+}
+
+.light-streak::after {
+  top: 58%;
+  height: 1px;
+  background: var(--grad-streak-warm);
+  animation: cclStreakSweep var(--dur-7) var(--ease-sweep) infinite;
+  animation-delay: calc(var(--dur-7) / 2);
+}
+
+.light-streak--wide {
+  inset: 0;
+}
+
+.light-streak--band {
+  left: 0;
+  right: 0;
+  top: -20%;
+  height: 140%;
+  overflow: hidden;
+}
+
+.light-streak--band::before {
+  top: 34%;
+  animation-duration: var(--dur-6);
+}
+
+.light-streak--band::after {
+  top: 62%;
+  animation-duration: var(--dur-6);
+  animation-delay: calc(var(--dur-6) / 3);
+}
+
+.light-streak--band > span {
+  position: absolute;
+  top: -30%;
+  left: 50%;
+  width: 300px;
+  height: 160%;
+  transform: translateX(-50%);
+  background: linear-gradient(
+    180deg,
+    transparent 0%,
+    var(--c-cyan-a10) 34%,
+    var(--c-cyan-a06) 58%,
+    transparent 100%
+  );
+  filter: blur(26px);
+  opacity: 0.5;
+  animation: cclBeamDrift 11s var(--ease-in-out-soft) infinite;
+}
+
+@keyframes cclBeamDrift {
+  0%,
+  100% {
+    transform: translateX(-58%) scaleX(0.72);
+    opacity: 0.22;
+  }
+  50% {
+    transform: translateX(-42%) scaleX(1.18);
+    opacity: 0.6;
+  }
+}
+
+/* Section boundary sweep: place .light-streak--band on a .section */
+.section--sweep {
+  overflow: hidden;
+}
+
+.section--sweep::after {
+  content: "";
+  position: absolute;
+  inset-inline: 0;
+  top: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--c-line-cyan), transparent);
+  z-index: 2;
+}
+
+/* ---------- Marquee scroll ---------------------------------------------- */
+.marquee__track {
+  animation: cclMarquee var(--marquee-duration, 38s) linear infinite;
+}
+
+.marquee--reverse .marquee__track {
+  animation-name: cclMarqueeReverse;
+}
+
+.marquee:hover .marquee__track {
+  animation-play-state: paused;
+}
+
+/* ---------- Mascot float / bob ------------------------------------------- */
+.mascot {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex: none;
+}
+
+.mascot > svg,
+.mascot > img {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.mascot--xs {
+  width: 44px;
+  height: 44px;
+}
+
+.mascot--sm {
+  width: 72px;
+  height: 72px;
+}
+
+.mascot--md {
+  width: 112px;
+  height: 112px;
+}
+
+.mascot--lg {
+  width: 168px;
+  height: 168px;
+}
+
+.mascot--xl {
+  width: 236px;
+  height: 236px;
+}
+
+.mascot--float {
+  animation: cclFloat 5.6s var(--ease-in-out-soft) infinite;
+}
+
+.mascot--bob {
+  animation: cclBob 4.4s var(--ease-in-out-soft) infinite;
+}
+
+.mascot--tilt {
+  transition: transform var(--dur-4) var(--ease-out);
+}
+
+.mascot--tilt:hover {
+  transform: rotate(-6deg) scale(1.05);
+}
+
+.mascot--glow::after {
+  content: "";
+  position: absolute;
+  inset: -12%;
+  border-radius: 50%;
+  background: radial-gradient(circle, var(--c-cyan-a16) 0%, transparent 70%);
+  z-index: -1;
+  animation: cclGlow 4.2s var(--ease-in-out-soft) infinite;
+}
+
+/* ---------- Count-up numbers ---------------------------------------------- */
+.count-up {
+  font-variant-numeric: tabular-nums;
+  display: inline-block;
+}
+
+.count-up.is-counting {
+  animation: cclCountPulse var(--dur-6) var(--ease-out);
+}
+
+/* ---------- Cursor-follow glow ---------------------------------------------- */
+.cursor-glow {
+  transform: translate3d(var(--glow-x, 0px), var(--glow-y, 0px), 0);
+  transition: opacity var(--dur-4) var(--ease-out), transform var(--dur-1) linear;
+}
+
+/* ---------- Magnetic buttons ------------------------------------------------------ */
+.magnetic {
+  transition: transform var(--dur-3) var(--ease-out);
+}
+
+/* ---------- 3D card tilt ----------------------------------------------------------- */
+.tilt {
+  transform-style: preserve-3d;
+  transform: perspective(1000px) rotateX(0deg) rotateY(0deg);
+  transition: transform var(--dur-4) var(--ease-out), box-shadow var(--dur-4) var(--ease-out);
+}
+
+.tilt.is-tilting {
+  transition: transform 80ms linear, box-shadow var(--dur-4) var(--ease-out);
+}
+
+/* ---------- Ripple ------------------------------------------------------------------ */
+.ripple {
+  position: relative;
+  overflow: hidden;
+}
+
+.ripple__wave {
+  position: absolute;
+  border-radius: 50%;
+  background: var(--c-cyan-a24);
+  transform: scale3d(0.2, 0.2, 1);
+  opacity: 0;
+  pointer-events: none;
+  animation: cclRipple var(--dur-6) var(--ease-out) forwards;
+}
+
+/* ---------- Pulse ring (live / status dots) --------------------------------------- */
+.pulse-dot {
+  position: relative;
+  display: inline-flex;
+  width: 10px;
+  height: 10px;
+  flex: none;
+}
+
+.pulse-dot::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  background: var(--c-cyan-400);
+}
+
+.pulse-dot::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  background: var(--c-cyan-400);
+  animation: cclPulseRing 2.4s var(--ease-out) infinite;
+}
+
+/* ---------- Shimmer / skeleton accent ------------------------------------------------ */
+.shimmer {
+  background: linear-gradient(
+    100deg,
+    transparent 20%,
+    var(--c-cyan-a16) 42%,
+    transparent 64%
+  );
+  background-size: 220% 100%;
+  animation: cclShimmer 3.2s linear infinite;
+}
+
+/* ---------- Spinner --------------------------------------------------------------------- */
+.spinner {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  border: 2px solid var(--c-line-strong);
+  border-top-color: var(--c-cyan-400);
+  animation: cclSpin 0.8s linear infinite;
+}
+
+/* ---------- Tab fade hook (used by .tabs__panel) --------------------------------------- */
+@keyframes tabFade {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 14px, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+/* ---------- Toast entry ------------------------------------------------------------------ */
+.toast {
+  animation: cclToastIn var(--dur-4) var(--ease-out) both;
+}
+
+/* ---------- Drawer item entry -------------------------------------------------------------- */
+.mobile-drawer.is-open .mobile-drawer__link {
+  animation: cclDrawerIn var(--dur-4) var(--ease-out) both;
+}
+
+.mobile-drawer.is-open .mobile-drawer__link:nth-child(1) {
+  animation-delay: 60ms;
+}
+.mobile-drawer.is-open .mobile-drawer__link:nth-child(2) {
+  animation-delay: 120ms;
+}
+.mobile-drawer.is-open .mobile-drawer__link:nth-child(3) {
+  animation-delay: 180ms;
+}
+.mobile-drawer.is-open .mobile-drawer__link:nth-child(4) {
+  animation-delay: 240ms;
+}
+.mobile-drawer.is-open .mobile-drawer__link:nth-child(5) {
+  animation-delay: 300ms;
+}
+
+/* ---------- Scroll hint ----------------------------------------------------------------------- */
+.scroll-hint {
+  position: absolute;
+  left: 50%;
+  bottom: var(--sp-6);
+  z-index: 2;
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--sp-2);
+  color: var(--c-text-dim);
+  font-size: var(--fs-2xs);
+  letter-spacing: var(--tr-wide);
+  text-transform: uppercase;
+  transform: translateX(-50%);
+}
+
+.scroll-hint__line {
+  width: 1px;
+  height: 40px;
+  background: linear-gradient(180deg, var(--c-cyan-400), transparent);
+  animation: cclScrollHint 2.2s var(--ease-in-out-soft) infinite;
+}
+
+/* ---------- Orbit decoration ------------------------------------------------------------------- */
+.orbit {
+  position: relative;
+  display: grid;
+  place-items: center;
+}
+
+.orbit__ring {
+  position: absolute;
+  border-radius: 50%;
+  border: 1px solid var(--c-line-cyan);
+  opacity: 0.4;
+}
+
+.orbit__ring--1 {
+  inset: 0;
+  animation: cclSpin 26s linear infinite;
+}
+
+.orbit__ring--2 {
+  inset: 12%;
+  border-style: dashed;
+  border-color: var(--c-line);
+  animation: cclSpinReverse 34s linear infinite;
+}
+
+.orbit__ring--3 {
+  inset: 24%;
+  border-color: var(--c-line-warm);
+  animation: cclSpin 20s linear infinite;
+}
+
+/* ---------- Parallax layers (driven by --parallax-y from JS) ----------------------------------- */
+.parallax {
+  will-change: transform;
+  transform: translate3d(0, var(--parallax-y, 0px), 0);
+  transition: transform var(--dur-3) var(--ease-out);
+}
+
+.parallax--slow {
+  transform: translate3d(0, calc(var(--parallax-y, 0px) * 0.35), 0);
+}
+
+.parallax--fast {
+  transform: translate3d(0, calc(var(--parallax-y, 0px) * 1.35), 0);
+}
+
+/* ---------- Scroll progress bar ------------------------------------------------------------------ */
+.scroll-progress {
+  transform: scaleX(var(--scroll-progress, 0));
+}
+
+/* ---------- Tabs panel transition hook ---------------------------------------------------------------- */
+.tabs__panel.is-active {
+  animation: tabFade var(--dur-4) var(--ease-out) both;
+}
+
+/* ---------- Reduced motion -------------------------------------------------------------------------- */
+@media (prefers-reduced-motion: reduce) {
+  .reveal,
+  .reveal--left,
+  .reveal--right,
+  .reveal--scale,
+  .reveal--blur {
+    opacity: 1 !important;
+    transform: none !important;
+    filter: none !important;
+    transition: none !important;
+  }
+
+  .hero__media img,
+  .marquee__track,
+  .mascot--float,
+  .mascot--bob,
+  .mascot--glow::after,
+  .light-streak::before,
+  .light-streak::after,
+  .light-streak--band > span,
+  .pulse-dot::after,
+  .shimmer,
+  .spinner,
+  .orbit__ring,
+  .scroll-hint__line {
+    animation: none !important;
+  }
+
+  .light-streak {
+    display: none;
+  }
+
+  .parallax,
+  .parallax--slow,
+  .parallax--fast {
+    transform: none !important;
+    transition: none !important;
+  }
+
+  .tilt,
+  .tilt.is-tilting {
+    transform: none !important;
+  }
+
+  .cursor-glow {
+    display: none;
+  }
+}

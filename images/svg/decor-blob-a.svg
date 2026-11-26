@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="400" height="400" role="img" aria-label="Organic gradient blob">
+  <title>Organic blob A</title>
+  <defs>
+    <linearGradient id="blobA" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#2F6BFF" stop-opacity=".30"/>
+      <stop offset="55%" stop-color="#00E0C6" stop-opacity=".16"/>
+      <stop offset="100%" stop-color="#7A5CFF" stop-opacity=".06"/>
+    </linearGradient>
+  </defs>
+  <path d="M214 36C316 48 382 128 372 222 362 316 268 380 174 372 80 364 26 282 38 192 50 102 112 24 214 36Z" fill="url(#blobA)"/>
+</svg>

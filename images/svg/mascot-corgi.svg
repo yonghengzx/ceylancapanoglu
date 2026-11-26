@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="128" height="128" role="img" aria-label="Biscuit the corgi mascot">
+  <title>Biscuit the corgi mascot</title>
+  <style>
+    .cclCorgiBob{transform-box:fill-box;transform-origin:center;animation:cclCorgiBobK 3s ease-in-out infinite}
+    .cclCorgiBlink{transform-box:fill-box;transform-origin:center;animation:cclCorgiBlinkK 4.4s ease-in-out infinite}
+    @keyframes cclCorgiBobK{0%,100%{transform:translateY(0) rotate(1.2deg)}50%{transform:translateY(-5px) rotate(-1.4deg)}}
+    @keyframes cclCorgiBlinkK{0%,84%,100%{transform:scaleY(1)}88%{transform:scaleY(.08)}}
+    @media (prefers-reduced-motion:reduce){.cclCorgiBob,.cclCorgiBlink{animation:none}}
+  </style>
+  <ellipse cx="64" cy="121" rx="33" ry="5.5" fill="#2A2233" opacity=".15"/>
+  <g class="cclCorgiBob">
+    <path d="M16 124c4-18 24-27 48-27s44 9 48 27z" fill="#F2A44E" stroke="#C9832F" stroke-width="3" stroke-linejoin="round"/>
+    <path d="M46 96c6 6 30 6 36 0l4 6c-7 7-37 7-44 0z" fill="#00E0C6"/>
+    <path d="M28 48 24 8 56 26z" fill="#F2A44E" stroke="#C9832F" stroke-width="3" stroke-linejoin="round"/>
+    <path d="M100 48 104 8 72 26z" fill="#F2A44E" stroke="#C9832F" stroke-width="3" stroke-linejoin="round"/>
+    <path d="M35 42 33 20 47 28z" fill="#FFD3A6"/>
+    <path d="M93 42 95 20 81 28z" fill="#FFD3A6"/>
+    <path d="M64 20c26 0 42 18 42 40 0 23-18 40-42 40s-42-17-42-40c0-22 16-40 42-40z" fill="#F2A44E" stroke="#C9832F" stroke-width="3" stroke-linejoin="round"/>
+    <path d="M64 20c-8 12-11 26-11 38 0 9 5 14 11 14s11-5 11-14c0-12-3-26-11-38z" fill="#FFF6EA"/>
+    <ellipse cx="64" cy="80" rx="27" ry="18" fill="#FFF6EA"/>
+    <ellipse cx="34" cy="72" rx="7.5" ry="4.5" fill="#FF9E8A" opacity=".55"/>
+    <ellipse cx="94" cy="72" rx="7.5" ry="4.5" fill="#FF9E8A" opacity=".55"/>
+    <g class="cclCorgiBlink">
+      <ellipse cx="46" cy="60" rx="6.5" ry="7.5" fill="#2A2233"/>
+      <ellipse cx="82" cy="60" rx="6.5" ry="7.5" fill="#2A2233"/>
+      <circle cx="44" cy="57" r="2.3" fill="#FFFFFF"/>
+      <circle cx="80" cy="57" r="2.3" fill="#FFFFFF"/>
+      <circle cx="48" cy="62" r="1.2" fill="#FFFFFF" opacity=".85"/>
+      <circle cx="84" cy="62" r="1.2" fill="#FFFFFF" opacity=".85"/>
+    </g>
+    <path d="M57 74q7-5 14 0-7 9-14 0z" fill="#2A2233"/>
+    <path d="M64 82v5m0 0c-3 4-8 2-10-2m10 2c3 4 8 2 10-2" fill="none" stroke="#2A2233" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+</svg>

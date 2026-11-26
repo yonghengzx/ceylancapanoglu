@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="128" height="128" role="img" aria-label="Pip the bird mascot">
+  <title>Pip the bird mascot</title>
+  <style>
+    .cclBirdBob{transform-box:fill-box;transform-origin:center;animation:cclBirdBobK 3.1s ease-in-out infinite}
+    .cclBirdBlink{transform-box:fill-box;transform-origin:center;animation:cclBirdBlinkK 4.7s ease-in-out infinite}
+    @keyframes cclBirdBobK{0%,100%{transform:translateY(0) rotate(-1.4deg)}50%{transform:translateY(-5.5px) rotate(1.4deg)}}
+    @keyframes cclBirdBlinkK{0%,85%,100%{transform:scaleY(1)}89%{transform:scaleY(.08)}}
+    @media (prefers-reduced-motion:reduce){.cclBirdBob,.cclBirdBlink{animation:none}}
+  </style>
+  <ellipse cx="64" cy="121" rx="29" ry="5" fill="#2A2233" opacity=".15"/>
+  <g class="cclBirdBob">
+    <path d="M56 112l-7 9M72 112l7 9" fill="none" stroke="#FFC44D" stroke-width="4.5" stroke-linecap="round"/>
+    <path d="M30 62c-9 6-11 23-5 31 8-4 12-19 12-29z" fill="#2F6BFF"/>
+    <path d="M98 62c9 6 11 23 5 31-8-4-12-19-12-29z" fill="#2F6BFF"/>
+    <ellipse cx="64" cy="70" rx="36" ry="38" fill="#4FD8C8" stroke="#2FA9B8" stroke-width="3"/>
+    <path d="M56 34c-1-9 1-16 5-20 0 8 1 13 4 17z" fill="#2FA9B8"/>
+    <path d="M63 32c0-10 3-17 8-21-1 8 1 14 4 18z" fill="#2FA9B8"/>
+    <path d="M50 36c-3-8-3-14 0-18 2 7 4 11 7 14z" fill="#2FA9B8"/>
+    <ellipse cx="64" cy="78" rx="24" ry="26" fill="#EAFBFF"/>
+    <circle cx="44" cy="74" r="6" fill="#FF9EAE" opacity=".5"/>
+    <circle cx="84" cy="74" r="6" fill="#FF9EAE" opacity=".5"/>
+    <g class="cclBirdBlink">
+      <circle cx="52" cy="60" r="7" fill="#2A2233"/>
+      <circle cx="76" cy="60" r="7" fill="#2A2233"/>
+      <circle cx="49.5" cy="57" r="2.6" fill="#FFFFFF"/>
+      <circle cx="73.5" cy="57" r="2.6" fill="#FFFFFF"/>
+      <circle cx="54" cy="63" r="1.4" fill="#FFFFFF" opacity=".85"/>
+      <circle cx="78" cy="63" r="1.4" fill="#FFFFFF" opacity=".85"/>
+    </g>
+    <path d="M56 72h16l-8 10z" fill="#FFC44D" stroke="#E0A02F" stroke-width="2.5" stroke-linejoin="round"/>
+  </g>
+</svg>

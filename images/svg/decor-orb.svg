@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="400" height="400" role="img" aria-label="Soft gradient light orb">
+  <title>Gradient light orb</title>
+  <defs>
+    <radialGradient id="orbA" cx="38%" cy="32%" r="70%">
+      <stop offset="0" stop-color="#5B8CFF" stop-opacity=".85"/>
+      <stop offset="45%" stop-color="#00E0C6" stop-opacity=".38"/>
+      <stop offset="100%" stop-color="#7A5CFF" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="orbRing" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#8FB4FF" stop-opacity=".55"/>
+      <stop offset="100%" stop-color="#00E0C6" stop-opacity=".12"/>
+    </linearGradient>
+  </defs>
+  <circle cx="200" cy="200" r="198" fill="url(#orbA)"/>
+  <circle cx="200" cy="200" r="126" fill="none" stroke="url(#orbRing)" stroke-width="1.2"/>
+  <circle cx="200" cy="200" r="168" fill="none" stroke="url(#orbRing)" stroke-width="1" opacity=".5"/>
+  <circle cx="318" cy="112" r="4" fill="#00E0C6" opacity=".7"/>
+</svg>

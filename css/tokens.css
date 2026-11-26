@@ -1,0 +1,251 @@
+/* =============================================================
+   CeYlanCapanoLu — tokens.css
+   The single source of truth for the visual system.
+   Every other stylesheet consumes these custom properties only.
+   ============================================================= */
+
+:root {
+  /* ---------- Colour · base surfaces ---------- */
+  --c-void: #05070d;
+  --c-abyss: #080c16;
+  --c-surface: #0b1220;
+  --c-surface-2: #101a2e;
+  --c-surface-3: #16233c;
+  --c-surface-4: #1d2c49;
+  --c-surface-5: #263a5c;
+
+  /* ---------- Colour · electric cyan-blue accent ---------- */
+  --c-cyan-50: #f0faff;
+  --c-cyan-100: #dff4ff;
+  --c-cyan-200: #baeaff;
+  --c-cyan-300: #7dd8fc;
+  --c-cyan-400: #38bdf8;
+  --c-cyan-500: #22d3ee;
+  --c-cyan-600: #0ea5e9;
+  --c-cyan-700: #0284c7;
+  --c-cyan-800: #0369a1;
+
+  /* ---------- Colour · warm coral-amber secondary ---------- */
+  --c-amber-200: #fde68a;
+  --c-amber-300: #fcd34d;
+  --c-amber-400: #fbbf24;
+  --c-amber-500: #f59e0b;
+  --c-coral-300: #fdba74;
+  --c-coral-400: #fb923c;
+  --c-coral-500: #f97316;
+  --c-coral-600: #ea580c;
+
+  /* ---------- Colour · support ---------- */
+  --c-rose-400: #fb7185;
+  --c-mint-400: #2dd4bf;
+  --c-violet-400: #a78bfa;
+  --c-lime-400: #a3e635;
+
+  /* ---------- Colour · text ---------- */
+  --c-white: #ffffff;
+  --c-text: #f2f7ff;
+  --c-text-soft: #c3cee4;
+  --c-text-muted: #8e9bb8;
+  --c-text-dim: #64718c;
+  --c-text-inverse: #05070d;
+
+  /* ---------- Colour · alpha overlays (white) ---------- */
+  --c-w-02: rgba(255, 255, 255, 0.02);
+  --c-w-04: rgba(255, 255, 255, 0.04);
+  --c-w-06: rgba(255, 255, 255, 0.06);
+  --c-w-08: rgba(255, 255, 255, 0.08);
+  --c-w-12: rgba(255, 255, 255, 0.12);
+  --c-w-16: rgba(255, 255, 255, 0.16);
+  --c-w-24: rgba(255, 255, 255, 0.24);
+  --c-w-40: rgba(255, 255, 255, 0.4);
+  --c-w-60: rgba(255, 255, 255, 0.6);
+
+  /* ---------- Colour · alpha overlays (cyan) ---------- */
+  --c-cyan-a06: rgba(56, 189, 248, 0.06);
+  --c-cyan-a10: rgba(56, 189, 248, 0.1);
+  --c-cyan-a16: rgba(56, 189, 248, 0.16);
+  --c-cyan-a24: rgba(56, 189, 248, 0.24);
+  --c-cyan-a40: rgba(56, 189, 248, 0.4);
+  --c-cyan-a60: rgba(56, 189, 248, 0.6);
+
+  /* ---------- Colour · alpha overlays (warm) ---------- */
+  --c-warm-a10: rgba(249, 115, 22, 0.1);
+  --c-warm-a20: rgba(249, 115, 22, 0.2);
+  --c-warm-a40: rgba(249, 115, 22, 0.4);
+
+  /* ---------- Colour · hairlines ---------- */
+  --c-line-soft: rgba(255, 255, 255, 0.06);
+  --c-line: rgba(255, 255, 255, 0.1);
+  --c-line-strong: rgba(255, 255, 255, 0.18);
+  --c-line-cyan: rgba(56, 189, 248, 0.34);
+  --c-line-warm: rgba(251, 146, 60, 0.34);
+
+  /* ---------- Colour · scrims ---------- */
+  --c-scrim-hero: rgba(5, 7, 13, 0.72);
+  --c-scrim-soft: rgba(5, 7, 13, 0.46);
+  --c-scrim-deep: rgba(5, 7, 13, 0.9);
+
+  /* ---------- Gradients ---------- */
+  --grad-brand: linear-gradient(135deg, #38bdf8 0%, #22d3ee 52%, #0ea5e9 100%);
+  --grad-brand-soft: linear-gradient(135deg, rgba(56, 189, 248, 0.22) 0%, rgba(34, 211, 238, 0.08) 100%);
+  --grad-warm: linear-gradient(135deg, #fbbf24 0%, #f97316 100%);
+  --grad-warm-soft: linear-gradient(135deg, rgba(251, 191, 36, 0.22) 0%, rgba(249, 115, 22, 0.08) 100%);
+  --grad-text: linear-gradient(102deg, #ffffff 0%, #dff4ff 44%, #7dd8fc 100%);
+  --grad-warm-text: linear-gradient(102deg, #fde68a 0%, #fb923c 100%);
+  --grad-glass: linear-gradient(158deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.02) 58%, rgba(255, 255, 255, 0) 100%);
+  --grad-border: linear-gradient(180deg, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0.04) 100%);
+  --grad-hero-scrim: linear-gradient(180deg, rgba(5, 7, 13, 0.2) 0%, rgba(5, 7, 13, 0.62) 58%, #05070d 100%);
+  --grad-hero-side: linear-gradient(90deg, rgba(5, 7, 13, 0.94) 0%, rgba(5, 7, 13, 0.62) 46%, rgba(5, 7, 13, 0.08) 100%);
+  --grad-streak: linear-gradient(90deg, transparent 0%, rgba(125, 216, 252, 0.9) 48%, transparent 100%);
+  --grad-streak-warm: linear-gradient(90deg, transparent 0%, rgba(251, 146, 60, 0.8) 48%, transparent 100%);
+  --grad-section-alt: linear-gradient(180deg, #080c16 0%, #0b1220 100%);
+  --grad-radial-cyan: radial-gradient(120% 78% at 82% -10%, rgba(56, 189, 248, 0.16) 0%, transparent 62%);
+  --grad-radial-warm: radial-gradient(110% 70% at 12% 108%, rgba(249, 115, 22, 0.14) 0%, transparent 60%);
+  --grad-radial-cyan-soft: radial-gradient(90% 60% at 50% 0%, rgba(34, 211, 238, 0.1) 0%, transparent 64%);
+
+  /* ---------- Typography · families (system only, offline safe) ---------- */
+  --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", "Segoe UI Variable Display",
+    "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif;
+  --font-display: "Segoe UI Variable Display", "Segoe UI", -apple-system, BlinkMacSystemFont,
+    "Helvetica Neue", "Noto Sans", Arial, sans-serif;
+  --font-mono: ui-monospace, "SF Mono", "Cascadia Mono", "Consolas", "Liberation Mono",
+    "DejaVu Sans Mono", monospace;
+
+  /* ---------- Typography · fluid scale ---------- */
+  --fs-hero: clamp(2.55rem, 1.25rem + 6.1vw, 5.75rem);
+  --fs-display: clamp(2.05rem, 1.25rem + 3.9vw, 4rem);
+  --fs-h2: clamp(1.72rem, 1.24rem + 2.2vw, 2.75rem);
+  --fs-h3: clamp(1.28rem, 1.08rem + 0.95vw, 1.72rem);
+  --fs-h4: clamp(1.06rem, 1rem + 0.38vw, 1.28rem);
+  --fs-lead: clamp(1.02rem, 0.97rem + 0.3vw, 1.24rem);
+  --fs-body: clamp(0.95rem, 0.92rem + 0.16vw, 1.04rem);
+  --fs-sm: 0.9rem;
+  --fs-xs: 0.8125rem;
+  --fs-2xs: 0.7rem;
+  --fs-stat: clamp(2rem, 1.3rem + 2.9vw, 3.35rem);
+
+  /* ---------- Typography · line heights ---------- */
+  --lh-tight: 1.04;
+  --lh-snug: 1.16;
+  --lh-title: 1.1;
+  --lh-body: 1.68;
+  --lh-relaxed: 1.82;
+
+  /* ---------- Typography · tracking ---------- */
+  --tr-tight: -0.032em;
+  --tr-snug: -0.018em;
+  --tr-normal: 0;
+  --tr-wide: 0.06em;
+  --tr-eyebrow: 0.22em;
+
+  /* ---------- Typography · weight ---------- */
+  --fw-regular: 400;
+  --fw-medium: 500;
+  --fw-semibold: 600;
+  --fw-bold: 700;
+  --fw-black: 800;
+
+  /* ---------- Spacing scale ---------- */
+  --sp-1: 0.25rem;
+  --sp-2: 0.5rem;
+  --sp-3: 0.75rem;
+  --sp-4: 1rem;
+  --sp-5: 1.5rem;
+  --sp-6: 2rem;
+  --sp-7: 3rem;
+  --sp-8: 4rem;
+  --sp-9: 6rem;
+  --sp-10: 8rem;
+  --sp-gutter: clamp(1.25rem, 0.6rem + 2.8vw, 3.5rem);
+  --sp-section: clamp(4.5rem, 2rem + 8vw, 9.5rem);
+  --sp-section-tight: clamp(3rem, 1.6rem + 4.6vw, 6rem);
+  --sp-block: clamp(1.75rem, 1rem + 2.4vw, 3.25rem);
+  --sp-inline: clamp(1rem, 0.7rem + 1vw, 1.75rem);
+
+  /* ---------- Layout ---------- */
+  --container-max: 1280px;
+  --container-wide: 1440px;
+  --container-text: 68ch;
+  --container-narrow: 860px;
+  --header-h: 74px;
+  --header-h-sm: 62px;
+  --gutter: var(--sp-gutter);
+  --grid-gap: clamp(1rem, 0.6rem + 1.2vw, 1.75rem);
+  --grid-gap-lg: clamp(1.5rem, 1rem + 1.8vw, 2.5rem);
+
+  /* ---------- Radii ---------- */
+  --r-2xs: 4px;
+  --r-xs: 8px;
+  --r-sm: 12px;
+  --r-md: 18px;
+  --r-lg: 26px;
+  --r-xl: 34px;
+  --r-2xl: 44px;
+  --r-pill: 999px;
+
+  /* ---------- Shadows ---------- */
+  --sh-xs: 0 1px 2px rgba(2, 5, 12, 0.4);
+  --sh-sm: 0 6px 18px -8px rgba(2, 5, 12, 0.62);
+  --sh-md: 0 18px 44px -20px rgba(2, 5, 12, 0.76);
+  --sh-lg: 0 38px 88px -38px rgba(2, 5, 12, 0.88);
+  --sh-xl: 0 60px 130px -54px rgba(2, 5, 12, 0.92);
+  --sh-inset: inset 0 1px 0 rgba(255, 255, 255, 0.06);
+  --sh-glass: 0 24px 70px -30px rgba(2, 5, 12, 0.86);
+  --sh-glow-cyan: 0 0 0 1px rgba(56, 189, 248, 0.34), 0 18px 60px -20px rgba(56, 189, 248, 0.45);
+  --sh-glow-warm: 0 0 0 1px rgba(251, 146, 60, 0.32), 0 18px 60px -20px rgba(249, 115, 22, 0.42);
+  --sh-focus: 0 0 0 3px rgba(56, 189, 248, 0.42);
+
+  /* ---------- Blur / glass ---------- */
+  --blur-glass: 14px;
+  --blur-heavy: 26px;
+
+  /* ---------- Motion · durations ---------- */
+  --dur-1: 120ms;
+  --dur-2: 220ms;
+  --dur-3: 380ms;
+  --dur-4: 600ms;
+  --dur-5: 900ms;
+  --dur-6: 1400ms;
+  --dur-7: 2200ms;
+  --dur-8: 3200ms;
+
+  /* ---------- Motion · easing ---------- */
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+  --ease-in-out-soft: cubic-bezier(0.4, 0, 0.2, 1);
+  --ease-spring: cubic-bezier(0.34, 1.46, 0.64, 1);
+  --ease-sweep: cubic-bezier(0.55, 0, 0.25, 1);
+
+  /* ---------- Z-index ---------- */
+  --z-base: 1;
+  --z-raised: 10;
+  --z-sticky: 100;
+  --z-header: 200;
+  --z-drawer: 300;
+  --z-overlay: 400;
+  --z-modal: 500;
+  --z-toast: 600;
+  --z-tooltip: 700;
+
+  /* ---------- Asset paths ---------- */
+  --img-dir: "../images/";
+  --noise-tile: url("../images/noise.svg");
+  --grid-tile: url("../images/pattern-grid.svg");
+  --streak-img: url("../images/streak.svg");
+  --chevron-img: url("../images/icon-chevron-down.svg");
+  --noise-tile: url("../images/noise.svg");
+}
+
+/* Light-theme inversion for the legal print surface and any explicit
+   light panel. Kept here so no other file needs raw colour literals. */
+.surface-light {
+  --c-text: #0b1220;
+  --c-text-soft: #33415c;
+  --c-text-muted: #5b6b88;
+  --c-text-dim: #7c8aa5;
+  --c-line-soft: rgba(11, 18, 32, 0.08);
+  --c-line: rgba(11, 18, 32, 0.14);
+  --c-line-strong: rgba(11, 18, 32, 0.24);
+  background: #f7f9fc;
+  color: var(--c-text);
+}
